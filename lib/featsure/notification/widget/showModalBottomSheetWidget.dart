@@ -1,5 +1,8 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:hamakapp/const/app_colors.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hamakapp/core/theme/app_colors.dart';
 
 class ShowmodalbottomsheetContentwidget extends StatelessWidget {
   const ShowmodalbottomsheetContentwidget({super.key});
@@ -13,10 +16,10 @@ class ShowmodalbottomsheetContentwidget extends StatelessWidget {
           height: 30,
           color: AppColor.primarycolor,
         ),
-        SizedBox(height: 22),
+        8.verticalSpace,
         Container(
           width: double.infinity,
-          height: 30,
+          height: 30.h,
           color: AppColor.primarycolor,
         ),
       ],

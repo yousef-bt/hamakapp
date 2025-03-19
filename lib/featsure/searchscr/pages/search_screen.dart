@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hamakapp/const/app_colors.dart';
-import 'package:hamakapp/const/app_text.dart';
+import 'package:hamakapp/core/theme/app_colors.dart';
+import 'package:hamakapp/core/constant/app_text.dart';
+import 'package:hamakapp/core/theme/app_txtstyle.dart';
 import 'package:hamakapp/featsure/searchscr/moudle/model_data.dart';
 import 'package:hamakapp/featsure/searchscr/widget/classroom_image.dart';
 
@@ -17,7 +18,7 @@ class SearchScreen extends StatelessWidget {
           backgroundColor: AppColor.seccolor,
           title: const Text(
             "HAMAK",
-            style: TextStyle(color: AppColor.iconcolor),
+            style: AppTxtstyle.headingStyle,
           ),
           centerTitle: true,
         ),
@@ -27,32 +28,17 @@ class SearchScreen extends StatelessWidget {
             return Theme(
               data: ThemeData(
                 dividerColor: Colors.transparent,
-                //-- color for spalsh
-                // splashColor: AppColor.splashColor,
-                // focusColor: AppColor.splashColor,
               ),
               child: ExpansionTile(
                 collapsedIconColor: AppColor.primarycolor,
                 iconColor: AppColor.primarycolor,
-                title: Text(
-                  college.collegeName,
-                  style: const TextStyle(
-                    fontFamily: 'Bona_Nova_SC',
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                title: Text(college.collegeName, style: AppTxtstyle.bold),
                 children: [
                   ExpansionTile(
                     collapsedIconColor: Colors.black,
                     iconColor: Colors.black,
-                    title: const Text(
-                      AppText.classRoom,
-                      style: TextStyle(
-                        fontFamily: 'Bona_Nova_SC',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                    ),
+                    title:  Text(AppText.classRoom,
+                        style: AppTxtstyle.bold16),
                     children: college.classrooms.map((classroom) {
                       return ListTile(
                         onTap: () {
@@ -64,26 +50,16 @@ class SearchScreen extends StatelessWidget {
                             ),
                           );
                         },
-                        title: Text(
-                          classroom.name,
-                          style: const TextStyle(
-                            fontFamily: 'Bona_Nova_SC',
-                            fontWeight: FontWeight.normal,
-                          ),
-                        ),
+                        title: Text(classroom.name, style: AppTxtstyle.normal),
                       );
                     }).toList(),
                   ),
                   ExpansionTile(
                     collapsedIconColor: Colors.black,
                     iconColor: Colors.black,
-                    title: const Text(
+                    title: Text(
                       "المخابر",
-                      style: TextStyle(
-                        fontFamily: 'Bona_Nova_SC',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
+                      style: AppTxtstyle.bold16,
                     ),
                     children: college.labs.map((lab) {
                       return ListTile(
@@ -92,16 +68,13 @@ class SearchScreen extends StatelessWidget {
                             backgroundColor: AppColor.primarycolor,
                             context: context,
                             builder: (context) => ClassroomImage(
-                              image: lab.imageUrl, 
+                              image: lab.imageUrl,
                             ),
                           );
                         },
                         title: Text(
                           lab.name,
-                          style: const TextStyle(
-                            fontFamily: 'Bona_Nova_SC',
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: AppTxtstyle.normal,
                         ),
                       );
                     }).toList(),
@@ -156,7 +129,7 @@ class SearchScreen extends StatelessWidget {
 //               collapsedIconColor: AppColor.primarycolor,
 //               iconColor: AppColor.primarycolor,
 //               showTrailingIcon: true,
-              
+
 //               //-
 //               title: Text(college.collegeName,
 //                   style: const TextStyle(

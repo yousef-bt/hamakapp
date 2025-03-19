@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hamakapp/appwidget/cust_floatactionbutton.dart';
-import 'package:hamakapp/const/app_colors.dart';
-import 'package:hamakapp/const/app_image.dart';
+import 'package:hamakapp/core/appwidget/cust_floatactionbutton.dart';
+import 'package:hamakapp/core/theme/app_colors.dart';
+import 'package:hamakapp/core/constant/app_image.dart';
 import 'package:hamakapp/featsure/searchscr/pages/search_screen.dart';
 // import 'package:hamak/appwidget/bottomappbar.dart';
-
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -15,21 +14,21 @@ class Homepage extends StatelessWidget {
       backgroundColor: AppColor.backSearchscr,
       appBar: AppBar(
         backgroundColor: AppColor.seccolor,
-        title: const Text(
+        title: Text(
           "كلية الهندسة الميكانيكية والكهربائية",
-          style:
-              TextStyle(color: AppColor.iconcolor, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
       ),
+
       body: InteractiveViewer(
-          constrained: false,
-          minScale: 0.1,
-          maxScale: 0.8,
-          child: Image.asset(
-            AppImage.map,
-            filterQuality: FilterQuality.high,
-          )),
+        constrained: false,
+        minScale: 0.1,
+        maxScale: 0.8,
+        child: Image.asset(
+          AppImage.map,
+          filterQuality: FilterQuality.high,
+        ),
+      ),
 
       // bottomNavigationBar: Bottomappbar(
       //   chiled: BottomBar(iconbottom: Icons.sort, hint: "programig"),

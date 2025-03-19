@@ -1,4 +1,4 @@
-#Wed Mar 19 10:39:31 EET 2025
+#Wed Mar 19 14:48:40 EET 2025
 base.0=Y\:\\hamakapp\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=Y\:\\hamakapp\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
 base.2=Y\:\\hamakapp\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hamakapp/const/app_colors.dart';
-import 'package:hamakapp/featsure/notification/pages/scren.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hamakapp/core/theme/app_colors.dart';
+import 'package:hamakapp/featsure/homescr/pages/homepage.dart';
+import 'package:hamakapp/featsure/notification/notification_serves.dart';
 import 'package:timezone/data/latest.dart' as tz;
 // import 'package:hamakapp/featsure/homescr/pages/homepage.dart';
-import 'package:hamakapp/featsure/notification/serves/notification_serves.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,14 +18,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-          fontFamily: 'BonaNovaSC-Bold',
-          splashColor: AppColor.splashColor,
-          focusColor: AppColor.splashColor,
-          hoverColor: AppColor.backSearchscr),
-      debugShowCheckedModeBanner: false,
-      home: NotificationSchedulerScreen(),
+    return ScreenUtilInit(
+      designSize: Size(1080, 2340),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) => MaterialApp(
+        theme: ThemeData(
+            fontFamily: 'BonaNovaSC-Bold',
+            splashColor: AppColor.splashColor,
+            focusColor: AppColor.splashColor,
+            hoverColor: AppColor.backSearchscr),
+        debugShowCheckedModeBanner: false,
+        home: Homepage(),
+      ),
     );
   }
 }
@@ -32,3 +38,5 @@ class MyApp extends StatelessWidget {
 
 //+  make a notification 
 //+ add a time and date to noti
+//+ botton nav bar 
+//+ add data 

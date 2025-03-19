@@ -1,6 +1,6 @@
 
 
-import 'package:hamakapp/const/app_image.dart';
+import 'package:hamakapp/core/constant/app_image.dart';
 import 'package:hamakapp/featsure/searchscr/moudle/college_model.dart';
 
 final List<CollegeModel> colleges = [
