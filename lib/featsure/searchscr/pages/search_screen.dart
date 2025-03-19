@@ -92,7 +92,7 @@ class SearchScreen extends StatelessWidget {
                             backgroundColor: AppColor.primarycolor,
                             context: context,
                             builder: (context) => ClassroomImage(
-                              image: lab.imageUrl,
+                              image: lab.imageUrl, 
                             ),
                           );
                         },

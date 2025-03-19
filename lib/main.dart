@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hamakapp/const/app_colors.dart';
-import 'package:hamakapp/featsure/notification/scren.dart';
+import 'package:hamakapp/featsure/notification/pages/scren.dart';
 import 'package:timezone/data/latest.dart' as tz;
 // import 'package:hamakapp/featsure/homescr/pages/homepage.dart';
-import 'package:hamakapp/featsure/notification/notification_serves.dart';
+import 'package:hamakapp/featsure/notification/serves/notification_serves.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,3 +31,4 @@ class MyApp extends StatelessWidget {
 
 
 //+  make a notification 
+//+ add a time and date to noti

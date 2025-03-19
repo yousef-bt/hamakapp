@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hamakapp/const/app_colors.dart';
 
 class CustFloatactionbutton extends StatelessWidget {
-  CustFloatactionbutton(
+  const CustFloatactionbutton(
       {super.key,
       required this.onPressed,
       required this.hintTxt,
