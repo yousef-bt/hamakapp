@@ -37,8 +37,7 @@ class SearchScreen extends StatelessWidget {
                   ExpansionTile(
                     collapsedIconColor: Colors.black,
                     iconColor: Colors.black,
-                    title:  Text(AppText.classRoom,
-                        style: AppTxtstyle.bold16),
+                    title: Text(AppText.classRoom, style: AppTxtstyle.bold16),
                     children: college.classrooms.map((classroom) {
                       return ListTile(
                         onTap: () {

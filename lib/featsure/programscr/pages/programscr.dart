@@ -1,3 +1,4 @@
+import 'package:calendar_view/calendar_view.dart';
 import 'package:flutter/material.dart';
 
 class Programscr extends StatelessWidget {
@@ -5,6 +6,11 @@ class Programscr extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(),
+      body: DayView(
+        controller: EventController(),
+      ),
+    );
   }
 }
