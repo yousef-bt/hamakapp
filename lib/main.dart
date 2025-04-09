@@ -31,16 +31,19 @@ class MyApp extends StatelessWidget {
             focusColor: AppColor.splashColor,
             hoverColor: AppColor.backSearchscr),
         debugShowCheckedModeBanner: false,
-        home: Programscr(),
+        home: WeeklyProgram(),
       ),
     );
   }
 }
 
-//?  make a notification     ===== DONE   But some issue not work
+//?  make a notification     ===== DONE   But some issue not work   
+//* later 
 //? add a time and date picker  ===== DONE , as a select and but is done but linke it to noti
+//*later 
 
-//+ make a celender ui
-//+ set data to celender
+//? make a celender ui   == DONE ALL THIS SO DONT NEDD ANY THING ELSE 
+
+
 //+ botton nav bar
 //+ add data
