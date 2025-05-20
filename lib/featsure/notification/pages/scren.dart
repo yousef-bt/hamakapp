@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hamakapp/core/appwidget/cust_floatactionbutton.dart';
 import 'package:hamakapp/featsure/notification/cubit/date_and_time_picker_cubit.dart';
 import 'package:hamakapp/featsure/notification/widget/showmodalbottomsheetwidget.dart';
 // import 'package:intl/intl.dart';
@@ -10,9 +11,9 @@ class NotificationSchedulerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-        create: (context) => DateAndTimePickerCubit(),
-        child: Scaffold(
-            body: Column(
+      create: (context) => DateAndTimePickerCubit(),
+      child: Scaffold(
+        body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -24,6 +25,11 @@ class NotificationSchedulerScreen extends StatelessWidget {
               child: Text("ADD "),
             )
           ],
-        )));
+        ),
+        //- float button
+        floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+        floatingActionButton: CustFloatactionbutton(),
+      ),
+    );
   }
 }

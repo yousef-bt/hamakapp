@@ -7,4 +7,9 @@ class ZoomDrawerWidgetCubit extends Cubit<ZoomDrawerWidgetState> {
   void selectMenuItem(MenuItemData item) {
     emit(state.copyWith(currentItem: item));
   }
+
+  void drawerState(bool theState) {
+    emit(state.copyWith(isDrawerOpen: theState));
+    print(" @@@@@@@@@@@@@@@@@ this after cubit  ${state.isDrawerOpen}");
+  }
 }

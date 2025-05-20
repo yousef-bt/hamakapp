@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:hamakapp/featsure/notification/cubit/date_and_time_picker_cubit.dart';
 import 'package:hamakapp/featsure/programscr/cubit/weeklyprogram_cubit.dart';
 import 'package:hamakapp/featsure/programscr/cubit/weeklyprogram_state.dart';
@@ -19,7 +20,12 @@ class WeeklyProgram extends StatelessWidget {
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
-          appBar: AppBar(title: Text('برنامج الأسبوع')),
+          appBar: AppBar(
+            title: Text('برنامج الأسبوع'),
+            leading: IconButton(
+                onPressed: () => ZoomDrawer.of(context)!.toggle(),
+                icon: Icon(Icons.menu)),
+          ),
           body: BlocBuilder<WeeklyProgramCubit, WeeklyProgramState>(
             builder: (context, state) {
               final cubit = context.read<WeeklyProgramCubit>();

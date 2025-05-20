@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hamakapp/core/appwidget/cust_floatactionbutton.dart';
 import 'package:hamakapp/core/theme/app_colors.dart';
 import 'package:hamakapp/core/constant/app_text.dart';
 import 'package:hamakapp/core/theme/app_txtstyle.dart';
@@ -12,6 +13,9 @@ class SearchScreen extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+        //- float button
+        floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+        floatingActionButton: CustFloatactionbutton(),
         backgroundColor: AppColor.backSearchscr,
         appBar: AppBar(
           automaticallyImplyLeading: false,
