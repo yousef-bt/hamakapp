@@ -27,3 +27,4 @@ com.yousefalbattour.hamak.hamakapp-packageDebugResources-25 Y:\hamakapp\build\ap
 com.yousefalbattour.hamak.hamakapp-packageDebugResources-26 Y:\hamakapp\build\app\intermediates\incremental\debug\packageDebugResources\stripped.dir
 com.yousefalbattour.hamak.hamakapp-merged_res-27 Y:\hamakapp\build\app\intermediates\merged_res\debug
 com.yousefalbattour.hamak.hamakapp-packaged_res-28 Y:\hamakapp\build\flutter_local_notifications\intermediates\packaged_res\debug
+com.yousefalbattour.hamak.hamakapp-packaged_res-29 Y:\hamakapp\build\motion\intermediates\packaged_res\debug

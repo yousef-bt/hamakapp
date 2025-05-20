@@ -29,24 +29,3 @@ class Lab {
     required this.imageUrl,
   });
 }
-
-// class CollegeModel {
-//   final String collegeName;
-//   final List<Classroom> classrooms;
-
-//   CollegeModel({
-//     required this.classrooms,
-//     required this.collegeName,
-//   });
-// }
-
-// class Classroom {
-//   final String name ;
-//   final String imageUrl;
-
-//   Classroom({
-//     required this.name,
-//     required this.imageUrl,
-//   });
-// }
-

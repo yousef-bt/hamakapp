@@ -27,6 +27,7 @@ INJECTED from Y:\hamakapp\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from Y:\hamakapp\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from Y:\hamakapp\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 MERGED from [:flutter_local_notifications] Y:\hamakapp\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-10:12
+MERGED from [:motion] Y:\hamakapp\build\motion\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.media:media:1.1.0] C:\Users\DELL\.gradle\caches\transforms-3\07b47b454deb98a7092e3e2891f674ce\transformed\media-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\8859fd2468ade3ef2655d1f63d6737f2\transformed\jetified-window-1.2.0\AndroidManifest.xml:17:1-31:12
 MERGED from [androidx.window:window-java:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\8a650b2c5ea333036303d473a939db42\transformed\jetified-window-java-1.2.0\AndroidManifest.xml:17:1-21:12
@@ -100,6 +101,8 @@ INJECTED from Y:\hamakapp\android\app\src\debug\AndroidManifest.xml
 INJECTED from Y:\hamakapp\android\app\src\debug\AndroidManifest.xml
 MERGED from [:flutter_local_notifications] Y:\hamakapp\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_local_notifications] Y:\hamakapp\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:motion] Y:\hamakapp\build\motion\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:motion] Y:\hamakapp\build\motion\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [androidx.media:media:1.1.0] C:\Users\DELL\.gradle\caches\transforms-3\07b47b454deb98a7092e3e2891f674ce\transformed\media-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.media:media:1.1.0] C:\Users\DELL\.gradle\caches\transforms-3\07b47b454deb98a7092e3e2891f674ce\transformed\media-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\8859fd2468ade3ef2655d1f63d6737f2\transformed\jetified-window-1.2.0\AndroidManifest.xml:20:5-44

@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hamakapp/featsure/notification/cubit/date_and_time_picker_cubit.dart';
 import 'package:hamakapp/featsure/programscr/cubit/weeklyprogram_cubit.dart';
 import 'package:hamakapp/featsure/programscr/cubit/weeklyprogram_state.dart';
 
@@ -10,8 +10,12 @@ class WeeklyProgram extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => WeeklyProgramCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => WeeklyProgramCubit(),
+        ),
+      ],
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
@@ -135,6 +139,7 @@ class WeeklyProgram extends StatelessWidget {
       BuildContext context, int dayIndex, String lectureName) {
     String instructor = '';
     String time = '';
+    TimeOfDay? pickedTime;
 
     // 🟢 نستخدم context هنا من الواجهة الأصلية قبل الدخول للـ Dialog
     final cubit = context.read<WeeklyProgramCubit>();
@@ -152,10 +157,45 @@ class WeeklyProgram extends StatelessWidget {
                 decoration: InputDecoration(labelText: 'اسم المحاضر'),
                 onChanged: (value) => instructor = value,
               ),
-              TextField(
-                decoration: InputDecoration(labelText: 'وقت المحاضرة'),
-                onChanged: (value) => time = value,
-              ),
+              8.verticalSpace,
+              BlocBuilder<DateAndTimePickerCubit, DateAndTimePickerState>(
+                builder: (context, state) {
+                  TimeOfDay? selectedTime;
+                  if (state is NotificationSelected) {
+                    selectedTime = state.selectedTime;
+                    time = selectedTime?.format(context) ?? " ";
+                  }
+
+                  return InkWell(
+                    onTap: () async {
+                      final pickedTime = await showTimePicker(
+                        context: context,
+                        initialTime: TimeOfDay.now(),
+                      );
+
+                      if (pickedTime != null && context.mounted) {
+                        context
+                            .read<DateAndTimePickerCubit>()
+                            .setTime(pickedTime);
+                      }
+                    },
+                    child: SizedBox(
+                      width: double.infinity,
+                      height: 20,
+                      child: Text(
+                        selectedTime != null
+                            ? " الوقت المحدد: ${selectedTime.format(context)}"
+                            : "اختر الوقت",
+                      ),
+                    ),
+                  );
+                },
+              )
+
+              // TextField(
+              //   decoration: InputDecoration(labelText: 'وقت المحاضرة'),
+              //   onChanged: (value) => time = value,
+              // ),
             ],
           ),
           actions: [
@@ -172,8 +212,11 @@ class WeeklyProgram extends StatelessWidget {
                     instructor,
                     time,
                   );
-                  Navigator.pop(dialogContext);
+
+                  debugPrint(
+                      "$lectureName ==== $instructor ==== $pickedTime ==== $time ");
                 }
+                Navigator.pop(dialogContext);
               },
               child: Text('إضافة'),
             ),

@@ -26,7 +26,7 @@ class AppTxtstyle {
   //! Font Size 16
   static TextStyle bold16 = TextStyle(
     fontWeight: FontWeight.bold,
-    fontSize: 16.sp,
+    fontSize: 16,
   );
 
   //! Font Size 20

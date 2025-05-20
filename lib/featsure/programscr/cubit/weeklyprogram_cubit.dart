@@ -1,5 +1,3 @@
-// lib/features/programs/cubit/weekly_program_cubit.dart
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:hamakapp/featsure/programscr/cubit/weeklyprogram_state.dart';
@@ -7,14 +5,32 @@ import 'package:hamakapp/featsure/programscr/cubit/weeklyprogram_state.dart';
 class WeeklyProgramCubit extends Cubit<WeeklyProgramState> {
   WeeklyProgramCubit()
       : super(WeeklyProgramState(
-          lecturesName: [ " عربي" ],
+          lecturesName: [],
           programOfWeek: [
-            {"dayName": "الأحد", "lectures": [], "isSelected": false},
-            {"dayName": "الإثنين", "lectures": [], "isSelected": false},
-            {"dayName": "الثلاثاء", "lectures": [], "isSelected": false},
-            {"dayName": "الأربعاء", "lectures": [], "isSelected": false},
-            {"dayName": "الخميس", "lectures": [], "isSelected": false},
-            {"dayName": "السبت", "lectures": [], "isSelected": false},
+            {
+              "dayName": "الأحد",
+              "lectures": [],
+            },
+            {
+              "dayName": "الإثنين",
+              "lectures": [],
+            },
+            {
+              "dayName": "الثلاثاء",
+              "lectures": [],
+            },
+            {
+              "dayName": "الأربعاء",
+              "lectures": [],
+            },
+            {
+              "dayName": "الخميس",
+              "lectures": [],
+            },
+            {
+              "dayName": "السبت",
+              "lectures": [],
+            },
           ],
         ));
 
